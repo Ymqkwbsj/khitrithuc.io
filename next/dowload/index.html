@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho lưu trữ GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .file-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .file-item {
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kho lưu trữ GitHub</h2>
+    <ul class="file-list" id="fileList"></ul>
+    
+    <script>
+        // Danh sách các tệp trên GitHub (thay đổi thành repo của bạn)
+        const files = [
+            {
+                name: "example1.txt",
+                url: "https://raw.githubusercontent.com/user/repo/main/example1.txt"
+            },
+            {
+                name: "example2.pdf",
+                url: "https://raw.githubusercontent.com/user/repo/main/example2.pdf"
+            },
+            {
+                name: "example3.jpg",
+                url: "https://raw.githubusercontent.com/user/repo/main/example3.jpg"
+            }
+        ];
+
+        function loadFiles() {
+            let fileList = document.getElementById("fileList");
+            files.forEach(file => {
+                let listItem = document.createElement("li");
+                listItem.className = "file-item";
+                listItem.innerHTML = `${file.name} <button onclick="downloadFile('${file.url}')">Tải xuống</button>`;
+                fileList.appendChild(listItem);
+            });
+        }
+
+        function downloadFile(url) {
+            let link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', ''); // Đảm bảo trình duyệt tải xuống thay vì mở file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        window.onload = loadFiles;
+    </script>
+</body>
+</html>
