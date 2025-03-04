@@ -1,24 +1,111 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: url('image.png') no-repeat center center/cover;
+    color: white;
+}
+header {
+    background-image: url(./img/2.jpg!bw700);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+.btn {
+    display: inline-block;
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.categories {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    text-align: center;
+    gap: 20px;
+    padding: 50px 20px;
 }
-.container {
+.category {
     background: white;
+    color: black;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-h1 {
-    color: #333;
+.why-choose {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: white;
+    color: black;
 }
-p {
-    color: #666;
+.why-choose img {
+    width: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+.auth-buttons {
+    align-content: center;
+}
+.hinhanh {
+    width: 80px;
+    height: 80px;
+   position: absolute;
+   top: 130px;
+   left: 250px;
+}
+.hinhanh1 {
+    width: 83px;
+    height: 83px;
+   position: absolute;
+   top: 130px;
+   left: 420px;
+}
+.hinhanh2 {
+    width: 75px;
+    height: 75px;
+   position: absolute;
+   top: 130px;
+   left: 610px;
+}
+.hinhanh3 {
+    width: 75px;
+    height: 75px;
+   position: absolute;
+   top: 130px;
+   left: 810px;
+}
+.hinhanh4 {
+    width: 75px;
+    height: 75px;
+   position: absolute;
+   top: 130px;
+   left: 1000px;
+}
+.cangiua {
+    display: flex;
+    justify-content: center;
 }
