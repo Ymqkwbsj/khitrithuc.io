@@ -10,25 +10,46 @@
 <body>
     <div class="login-container">
         <h2>Classy Login Form</h2>
-        <form>
+        <form onsubmit="return handleLogin(event)">
             <div class="input-group">
                 <span class="icon">&#128100;</span>
-                <input type="text" placeholder="User name" required>
+                <input type="text" id="username" placeholder="User name" required>
             </div>
             <div class="input-group">
                 <span class="icon">&#128274;</span>
-                <input type="password" placeholder="Password" required>
+                <input type="password" id="password" placeholder="Password" required>
             </div>
             <div class="options">
                 <label><input type="checkbox"> Remember me</label>
                 <a href="#">new user</a>
             </div>
             <button type="submit" class="btn">Login</button>
-           
-            
-            </div>
         </form>
     </div>
-
+    
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Ngăn chặn form submit mặc định
+            
+            const users = {};
+            for (let i = 1; i <= 9; i++) {
+                users[`user${i}`] = "123";
+            }
+            users["root"] = "root";
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (users[username] && users[username] === password) {
+                if (username === "root") {
+                    window.location.href = "https://www.youtube.com";
+                } else {
+                    window.location.href = "https://www.google.com";
+                }
+            } else {
+                alert("Bạn đã đăng nhập sai!");
+            }
+        }
+    </script>
 </body>
 </html>
