@@ -70,3 +70,42 @@ footer {
 .auth-buttons {
     align-content: center;
 }
+.hinhanh {
+    width: 80px;
+    height: 80px;
+   position: absolute;
+   top: 130px;
+   left: 250px;
+}
+.hinhanh1 {
+    width: 83px;
+    height: 83px;
+   position: absolute;
+   top: 130px;
+   left: 420px;
+}
+.hinhanh2 {
+    width: 75px;
+    height: 75px;
+   position: absolute;
+   top: 130px;
+   left: 610px;
+}
+.hinhanh3 {
+    width: 75px;
+    height: 75px;
+   position: absolute;
+   top: 130px;
+   left: 810px;
+}
+.hinhanh4 {
+    width: 75px;
+    height: 75px;
+   position: absolute;
+   top: 130px;
+   left: 1000px;
+}
+.cangiua {
+    display: flex;
+    justify-content: center;
+}
